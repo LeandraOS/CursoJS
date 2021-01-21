@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 10vh;
+            font: normal 20pt Arial;
+            text-align: center;
+            background-color: #deb887;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var name = window.prompt('Como você se chama? ')
+        var salario = Number(window.prompt('Quanto você recebe por mês? '))
+        var salarioFormat = salario.toFixed(2)
+        document.write(`Olá, ${name} seu nome tem ${name.length} letras! <br/>`)
+        document.write(`Seu nome em maiúsculas é ${name.toUpperCase()} <br/>`)
+        document.write(`Seu nome em minúsculas é ${name.toLowerCase()}<br/>`)
+        document.write(`Seu salário em Real é: ${salarioFormat.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br/>`)
+        document.write(`Seu salário em Dóllares é:  ${salarioFormat.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}<br/>`)
+        document.write(`Seu salário em Euros é:  ${salarioFormat.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}`)
+    </script>
+    
+</body>
+</html>
