@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex001</title>
+    <style>
+        body{
+            margin-top: 10vh;
+            font: normal 20pt Arial;
+            text-align: center;
+            background-color: #deb887;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Operações matemáticas básicas, autoatribuições e incrementos.</h2>
+    <script>
+        window.alert('Digite números para que todas as operações matemáticas sejam realizadas usando-os.')
+        var numero1 = Number(window.prompt('Digite um número: '))
+        var numero2 = Number(window.prompt('Digite outro número: '))
+        
+        // Operações aritméticas
+        document.write(`O resultado da <strong>soma</strong> dos números ${numero1} + ${numero2} é igual a: ${numero1 + numero2}<br/>`)
+        document.write(`O resultado da <strong>subtração</strong> dos números ${numero1} - ${numero2} é igual a: ${numero1 - numero2}<br/>`)
+        document.write(`O resultado da <strong>multiplicação</strong> dos números ${numero1} * ${numero2} é igual a: ${numero1 * numero2}<br/>`)
+        document.write(`O resultado da <strong>divisão</strong> dos números ${numero1} / ${numero2} é igual a: ${(numero1/numero2).toFixed(2)}<br/>`)
+        document.write(`O resultado da <strong>exponenciação</strong> dos números ${numero1} ** ${numero2} é igual a: ${numero1 ** numero2}</br>`)
+
+        document.write(`O resultado do <strong>resto da divisão</strong> dos números ${numero1} % ${numero2} é igual a: ${numero1 % numero2}<br/><br/>`)
+
+        // Autoatribuições
+
+        document.write(`O resultado da <strong>autoatribuição</strong> da <strong>soma</strong> dos números ${numero1} + ${numero2} é igual a: ${numero1 += numero2}<br/>`)
+        document.write(`O resultado da <strong>autoatribuição</strong> da <strong>subtração</strong> dos números ${numero1} - ${numero2} é igual a: ${numero1 -= numero2}<br/>`)
+        document.write(`O resultado da <strong>autoatribuição</strong> da <strong>multiplicação</strong> dos números ${numero1} * ${numero2} é igual a: ${numero1 *= numero2}<br/>`)
+        document.write(`O resultado da <strong>autoatribuição</strong> da <strong>divisão</strong> dos números ${numero1} / ${numero2} é igual a: ${(numero1/=numero2).toFixed(2)}<br/>`)
+        document.write(`O resultado da <strong>autoatribuição</strong> da <strong>exponenciação</strong> dos números ${numero1} ** ${numero2} é igual a: ${numero1 **= numero2}</br>`)
+        document.write(`O resultado da <strong>autoatribuição</strong> do <strong>resto da divisão</strong> dos números ${numero1} % ${numero2} é igual a: ${numero1 %= numero2}<br/><br/>`)
+
+        //Incrementos
+
+        document.write(`O resultado do <strong>incremento</strong> do número ${numero1} é igual a: ${++numero1}<br/>`)
+        document.write(`O resultado do <strong>decremento</strong> do número ${numero1} é igual a: ${--numero1}<br/>`)
+    </script>
+</body>
+</html>
