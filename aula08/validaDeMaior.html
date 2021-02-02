@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex001</title>
+    <title>Validação</title>
     <style>
         body{
             margin-top: 10vh;
@@ -13,20 +13,22 @@
         }
     </style>
 </head>
-
 <body>
     <h2>Operadores Relacionais.</h2>
     <script>
         window.alert('Digite sua idade e saiba se você é de maior não.')
         var numero1 = Number(window.prompt('Digite sua idade: '))
+        var resultado = ''
+        
         
     document.write(`${numero1>= 18}! Pois você tem ${numero1} anos!!!<br/>`)
     // Operador de comparação apenas do conteúdo, não faz a comparação se ambos possuem o mesmo tipo.
-    document.write(`${numero1 == '18'}! Pois vocêtem ${numero1 }anos!!! <br/>`)
+    document.write(`${numero1 == '18'}! Pois você tem ${numero1 }anos!!! <br/>`)
     //Operador de comparação restrito, além de comparar o conteúdo faz a comparação do tipo também.
     document.write(`${numero1 === '18'}! Pois você tem ${numero1 } anos, que é o um número e não uma palavra('18')!!! <br/>`)
 
-
+    // utilizando o operador ternário para fazer a validação
+    document.write(`${resultado = numero1 >= 18 ? 'Você é maior de idade': 'Você é menor de idade'}! Pois você tem ${numero1 } anos!!! <br/>`)
     </script>
 </body>
 </html>
