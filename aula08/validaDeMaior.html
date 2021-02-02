@@ -20,13 +20,11 @@
         var numero1 = Number(window.prompt('Digite sua idade: '))
         var resultado = ''
         
-        
     document.write(`${numero1>= 18}! Pois você tem ${numero1} anos!!!<br/>`)
     // Operador de comparação apenas do conteúdo, não faz a comparação se ambos possuem o mesmo tipo.
     document.write(`${numero1 == '18'}! Pois você tem ${numero1 }anos!!! <br/>`)
     //Operador de comparação restrito, além de comparar o conteúdo faz a comparação do tipo também.
     document.write(`${numero1 === '18'}! Pois você tem ${numero1 } anos, que é o um número e não uma palavra('18')!!! <br/>`)
-
     // utilizando o operador ternário para fazer a validação
     document.write(`${resultado = numero1 >= 18 ? 'Você é maior de idade': 'Você é menor de idade'}! Pois você tem ${numero1 } anos!!! <br/>`)
     </script>
