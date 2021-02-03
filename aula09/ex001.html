@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: #92b1ee;
+            font: normal 18pt Arial;
+            justify-content: center;
+            position: absolute;
+            align-items: center;
+            vertical-align:middle;
+            display:table-cell;
+        }
+        div{
+            width: 20vh;
+            height: 6vh;
+            margin: 20px;
+            background: #cccccc;
+            display:table;
+            border-radius: 20px;
+        }
+        div p#txt{
+            text-align: center;
+            vertical-align:middle;
+            display:table-cell;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg"><p id="txt">Clique em mim</p></div>
+    <div name="name"><p id="txt">Clique em mim</p></div>
+    <div class="class"><p id="txt">Clique em mim</p></div>
+
+    <script>
+        // comandos para captar informações dentro do DOM
+       // window.document.write(window.navigator.appName)
+       // window.document.write(window.document.URL)
+
+       //Seletor de tags
+
+       var corpo = window.document.body
+       var p1 = window.document.getElementsByTagName('p')[0]
+       
+       /* escreve o conteudo de p1 na tela
+       window.document.write(p1.innerText)
+       - muda a cor de algum  elemento na tela
+       p1.style.color = "blue"
+       - muda a cor do background do body
+       corpo.style.background = '#cecece'*/
+
+       /*innerText não capta os filhos, ou seja, a formatação em alguns casos
+        - innerHTML capta os filhos e as formatações existentes
+       window.alert(p1.innerText)*/
+
+       /*Seleciona por id
+       var d = window.document.getElementById('msg')
+       d.style.background = '#cecece'
+       d.innerText = "Estou aguardando"*/
+
+       /* Seleciona por name
+       var d = window.document.getElementsByName('name')[0]
+       d.style.background = '#cecece'
+       d.innerText = "Estou aguardando"/*
+
+       /* seleciona por class
+       var d = window.document.getElementsByClassName('class')[0]
+       d.style.background = '#128081'
+       d.innerText = "Estou aguardando"
+
+       /* É possível fazer as operações acima usando o querySelector
+       com ele é usada a sintaxe :
+       nomeDaTag#'id'
+       nomeDaTag.'class'
+       */
+
+       var d = window.document.querySelector('div#msg')
+       d.style.color = 'white'
+       d.style.background = '#090f49'
+
+
+       var d = window.document.querySelector('div.class')
+       d.style.background = '#169999'
+
+
+
+       
+
+
+    </script>
+    
+</body>
+</html>
