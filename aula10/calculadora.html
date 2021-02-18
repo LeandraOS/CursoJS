@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+
+        body{
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+
+        h1{
+            font: normal 36pt Arial;
+            margin: 60px;
+            color: #7eb995;
+        }
+
+        input{
+            font: normal 16pt Arial;
+            width: 80px;
+            text-align: center;
+            outline: none;
+        }
+
+        input#button{
+            background-color: #7eb995;
+            color: #ffffff;
+            height: 33px;
+            border-radius: 7px;
+            width: 120px;
+            cursor: pointer;
+            border: none;
+            margin-left: 20px;
+        }
+        
+        div{
+            background-color: #dafae173;
+            margin: 100px auto;
+            margin-top: 40px;
+            width: 440px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            border-radius: 7px ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <!--Soma -->
+    <input type="number" name="txtsum1" id="txtsum1"> +
+    <input type="number" name="txtsum2" id="txtsum2">
+    <input type="button" id = "button" value="Somar" onclick="somar()">
+    <div id="res">Resultado:</div>
+
+    <!--Subtração -->
+    <input type="number" name="txtsub1" id="txtsub1"> -
+    <input type="number" name="txtsub2" id="txtsub2">
+    <input type="button" id = "button" value="Subtrair" onclick="subtrair()">
+    <div id="resS">Resultado:</div>
+
+    <!--Multiplicação -->
+    <input type="number" name="txtmul1" id="txtmul1"> *
+    <input type="number" name="txtmul2" id="txtmul2">
+    <input type="button" id = "button" value="Multiplicar" onclick="multiplicar()">
+    <div id="resM">Resultado:</div>
+
+    <!--Divisão -->
+    <input type="number" name="txtdiv1" id="txtdiv1"> /
+    <input type="number" name="txtdiv2" id="txtdiv2">
+    <input type="button" id = "button" value="Dividir" onclick="dividir()">
+    <div id="resD">Resultado:</div>
+
+    <script>
+
+        function somar() {
+            var num1 = window.document.getElementById('txtsum1')
+            var num2 = window.document.querySelector('input#txtsum2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var sum = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${sum}</strong>`
+
+        }
+
+        function subtrair(){
+            var numS1 = window.document.getElementById('txtsub1')
+            var numS2 = window.document.querySelector('input#txtsub2')
+            var res = window.document.getElementById('resS')
+            var ns1 = Number(numS1.value)
+            var ns2 = Number(numS2.value)
+            var sub = ns1 - ns2
+            res.innerHTML = `A subtração entre ${ns1} e ${ns2} é igual a <strong>${sub}</strong>`
+
+        }
+
+        function multiplicar(){
+            var numM1 = window.document.getElementById('txtmul1')
+            var numM2 = window.document.querySelector('input#txtmul2')
+            var res = window.document.getElementById('resM')
+            var nM1 = Number(numM1.value)
+            var nM2 = Number(numM2.value)
+            var mul = nM1 * nM2
+            res.innerHTML = `A multiplicação entre ${nM1} e ${nM2} é igual a <strong>${mul}</strong>`
+
+        }
+
+        function dividir(){
+            var numD1 = window.document.getElementById('txtdiv1')
+            var numD2 = window.document.querySelector('input#txtdiv2')
+            var res = window.document.getElementById('resD')
+            var nD1 = Number(numD1.value)
+            var nD2 = Number(numD2.value)
+            var div = (nD1 / nD2).toFixed(2)
+
+            res.innerHTML = `A subtração entre ${nD1} e ${nD2} é igual a <strong>${div}</strong>`
+
+        }
+
+    </script>
+</body>
+</html>
